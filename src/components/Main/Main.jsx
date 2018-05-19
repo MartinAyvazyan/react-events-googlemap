@@ -11,10 +11,17 @@ const Main = () => (
   <div>
     <AppBar title="My AppBar" />
     <Search />
-    <GoogleMap />
-    <Events />
-
+    <div className="main">
+      <div className="googlemap">
+        <GoogleMap />
+      </div>
+      <div className="events">
+        <Events />
+      </div>
+    </div>
   </div>
+
+
 );
 
 export default Main;

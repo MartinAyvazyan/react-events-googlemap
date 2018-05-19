@@ -52,12 +52,14 @@ export const reducer = (state = initialState, action) => {
 
 export const search = query => (dispatch) => {
   dispatch(doQueryChange(query));
-  eventbrite
-    .fetchEventsByQuery(query)
-    .then(({ ok, events }) => {
-      if (ok) {
-        dispatch(doFetchSucces(events));
-      } else dispatch(doFetchFailed('cannot fetch Events'));
-    })
-    .catch(() => dispatch(doFetchFailed('cannot fetch Events')));
+  if (query) {
+    eventbrite
+      .fetchEventsByQuery(query)
+      .then(({ ok, events }) => {
+        if (ok) {
+          dispatch(doFetchSucces(events));
+        } else dispatch(doFetchFailed('cannot fetch Events'));
+      })
+      .catch(() => dispatch(doFetchFailed('cannot fetch Events')));
+  }
 };

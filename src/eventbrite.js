@@ -10,6 +10,11 @@ export const fetchEventsByQuery = query =>
       return res.json().then(data => ({ ok: true, events: data.events }));
     });
 
-
-export default fetchEventsByQuery;
-
+export const fetchOneEvent = id =>
+  fetch(`${API_URL}/events/${id}/?expand=venue&token=BHVEJSNZNZRUKYVRCKVH`)
+    .then((res) => {
+      if (!res.ok) {
+        return { ok: false, venue: null };
+      }
+      return res.json().then(data => ({ ok: true, venue: data.venue }));
+    });

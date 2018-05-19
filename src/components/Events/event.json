@@ -1,0 +1,75 @@
+ {
+            "name": {
+                "text": "Mars Workshops", 
+                "html": "Mars Workshops"
+            }, 
+            "description": {
+                "text": "Avoid Nursing Home Poverty\u2026\u00a0 \u00a0 \u2026Join us to learn how.\nNursing home care costs average over $8,000 a month. Join us at a workshop to learn how to plan for your future and avoid the cost of long term care.\n\nLearn how to protect your home from an estate recovery lien\nLearn the 3 BIG myths of Medicaid qualification\nLearn how to protect and preserve YOUR life savings\nAND discover how much power your choices today can impact your financial freedom for the future\n", 
+                "html": "<H2>Avoid Nursing Home Poverty\u2026<BR>\u00a0 \u00a0 \u2026Join us to learn how.<\/H2>\n<P>Nursing home care costs average over $8,000 a month. Join us at a workshop to learn how to plan for your future and avoid the cost of long term care.<\/P>\n<UL>\n<LI>Learn how to protect your home from an estate recovery lien<\/LI>\n<LI>Learn the 3 BIG myths of Medicaid qualification<\/LI>\n<LI>Learn how to protect and preserve YOUR life savings<\/LI>\n<LI>AND discover how much power your choices today can impact your financial freedom for the future<\/LI>\n<\/UL>"
+            }, 
+            "id": "40871830746", 
+            "url": "https://www.eventbrite.com/e/mars-workshops-tickets-40871830746?aff=ebapi", 
+            "start": {
+                "timezone": "America/New_York", 
+                "local": "2018-06-28T18:00:00", 
+                "utc": "2018-06-28T22:00:00Z"
+            }, 
+            "end": {
+                "timezone": "America/New_York", 
+                "local": "2018-06-28T20:00:00", 
+                "utc": "2018-06-29T00:00:00Z"
+            }, 
+            "organization_id": "210470708585", 
+            "created": "2017-11-29T13:53:23Z", 
+            "changed": "2018-03-01T14:30:38Z", 
+            "capacity": 24, 
+            "capacity_is_custom": true, 
+            "status": "live", 
+            "currency": "USD", 
+            "listed": true, 
+            "shareable": true, 
+            "online_event": false, 
+            "tx_time_limit": 720, 
+            "hide_start_date": false, 
+            "hide_end_date": false, 
+            "locale": "en_US", 
+            "is_locked": false, 
+            "privacy_setting": "unlocked", 
+            "is_series": true, 
+            "is_series_parent": false, 
+            "is_reserved_seating": false, 
+            "show_pick_a_seat": false, 
+            "show_seatmap_thumbnail": false, 
+            "show_colors_in_seatmap_thumbnail": false, 
+            "source": "create_2.0", 
+            "is_free": true, 
+            "version": "3.0.0", 
+            "logo_id": "30874016", 
+            "organizer_id": "13648595033", 
+            "venue_id": "19380038", 
+            "category_id": "115", 
+            "subcategory_id": "15008", 
+            "format_id": "2", 
+            "resource_uri": "https://www.eventbriteapi.com/v3/events/40871830746/", 
+            "series_id": "34094745301", 
+            "logo": {
+                "crop_mask": {
+                    "top_left": {
+                        "x": 0, 
+                        "y": 0
+                    }, 
+                    "width": 2160, 
+                    "height": 1080
+                }, 
+                "original": {
+                    "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F30874016%2F210470708585%2F1%2Foriginal.jpg?auto=compress&s=a66e59451bf7d482b2a43835b770a5fe", 
+                    "width": 2160, 
+                    "height": 1080
+                }, 
+                "id": "30874016", 
+                "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F30874016%2F210470708585%2F1%2Foriginal.jpg?h=200&w=450&auto=compress&rect=0%2C0%2C2160%2C1080&s=60b51cc3df124ea0c390d69d307d88bc", 
+                "aspect_ratio": "2", 
+                "edge_color": null, 
+                "edge_color_set": true
+            }
+        }

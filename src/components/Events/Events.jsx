@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EventCard from '../EventCard';
 
 const Events = ({ events }) => (
-  <ul>
-    {events && events.map(event => <li key={event.id}> {event.name.text} </li>)}
-  </ul>
+
+  events && events.map(event => <div key={event.id}> <EventCard {...event} /> </div>)
+
 
 );
 
-Events.prototype = {
+Events.propTypes = {
   events: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  })),
+    id: PropTypes.string.isRequired,
+  })).isRequired,
 };
 export default Events;
 // ToDo learn FLOW

@@ -1,2 +1,2 @@
-export { default } from './GoogleMap';
+export { default } from './GoogleMap.container';
 

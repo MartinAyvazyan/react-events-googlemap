@@ -1,3 +1,17 @@
 .search {
     text-align:center
 }
+.main
+{
+    text-align:center;
+}
+.events
+{
+    display:inline-block;
+    
+}
+.googlemap
+{
+    display:inline-block;
+    float: left;
+}
