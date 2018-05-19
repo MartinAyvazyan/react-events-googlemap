@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import PropTypes from 'prop-types';
+import debounce from 'lodash-es/debounce';
+
 
 class Search extends Component {
+  search = debounce(this.props.handleChange, 400);
   handleChange(query) {
-    this.props.handleChange(query);
+    this.search(query);
     console.log(123);
   }
   render() {

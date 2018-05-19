@@ -43,7 +43,6 @@ export const searchInMap = id => (dispatch) => {
     .fetchOneEvent(id)
     .then(({ ok, venue }) => {
       if (ok) {
-        //console.log( typeof (venue.latitude));
         dispatch(chnageLocation(venue.latitude, venue.longitude));
       } else dispatch(doFetchFailed('cannot fetch event1'));
     })
