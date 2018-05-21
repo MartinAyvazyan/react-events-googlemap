@@ -3,46 +3,49 @@ import GoogleMapReact from 'google-map-react';
 import PropTypes from 'prop-types';
 
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = () =>
+  <i className="material-icons" style={{ fontSize: '48px', color: 'red' }}>add_location</i>;
+
 const defaultProps = {
   center: {
     lat: 10,
     lng: 10,
   },
-  zoom: 11,
+  zoom: 15,
 };
-const GoogleMap = (props) => {
-  console.log(props);
-
-  return (
+const GoogleMap = props => (
 
 
   // Important! Always set the container height explicitly
-    <div style={{ height: '300px', width: '300px' }}>
-      <GoogleMapReact
+  <div style={{ height: '400px', width: '1350px' }}>
+    <GoogleMapReact
          // bootstrapURLKeys={{ key: /* YOUR KEY HERE */ }}
-        defaultCenter={({
+      defaultCenter={({
         lat: parseFloat(props.latitude),
         lng: parseFloat(props.longitude),
       })}
-        center={({
+      center={({
           lat: parseFloat(props.latitude),
           lng: parseFloat(props.longitude),
         })}
-        otherwise={console.log(props)}
-        defaultZoom={defaultProps.zoom}
-      >
-        <AnyReactComponent
-          lat={props.latitude}
-          lng={props.latitude}
-          text="Echmiadzin"
-        />
-      </GoogleMapReact>
-    </div>
-  );
-};
+      otherwise={console.log(props)}
+      defaultZoom={defaultProps.zoom}
+    >
+      <AnyReactComponent
+        lat={parseFloat(props.latitude)}
+        lng={parseFloat(props.longitude)}
+        text="aaaaaaaaa"
+      />
+    </GoogleMapReact>
+  </div>
+);
+
 AnyReactComponent.propTypes = {
   text: PropTypes.string.isRequired,
+};
+GoogleMap.prototype = {
+  latitude: PropTypes.number.isRequired,
+  longitude: PropTypes.number.isRequired,
 };
 
 export default GoogleMap;

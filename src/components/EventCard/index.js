@@ -1,2 +1,2 @@
-export { default } from './EventCard.container';
+export { default } from './EventCard';
 
