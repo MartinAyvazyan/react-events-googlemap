@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Events from './Events';
-import { searchInMap } from '../../modules/map';
+import searchInMap from '../../modules/map/mapThunk';
 
 const mapStateToProps = state => ({
   events: state.search.events,

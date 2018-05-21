@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import EventCard from '../EventCard';
+import EventCard from '../../../components/EventCard';
 
-const Events = ({ events }) => (
+const Events = props => (
 
-  events && events.map(event => <div key={event.id}> <EventCard {...event} /> </div>)
+  props.events && props.events.map(event =>
+    <div key={event.id}> <EventCard {...event} handleClick={props.handleClick} /> </div>)
 
 
 );

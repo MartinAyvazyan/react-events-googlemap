@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import { reducer as search } from './search';
-import { reducer as map } from './map';
+import search from './search/searchReducer';
+import map from './map/mapReducer';
 
 
 export default combineReducers({

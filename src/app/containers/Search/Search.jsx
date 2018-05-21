@@ -8,7 +8,6 @@ class Search extends Component {
   search = debounce(this.props.handleChange, 400);
   handleChange(query) {
     this.search(query);
-    console.log(123);
   }
   render() {
     return (

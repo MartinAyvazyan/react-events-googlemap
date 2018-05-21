@@ -1,9 +1,9 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 
-import Search from '../Search';
-import Events from '../Events';
-import GoogleMap from '../GoogleMap';
+import Search from '../../app/containers/Search';
+import Events from '../../app/containers/Events';
+import GoogleMap from '../../app/containers/GoogleMap';
 
 
 const Main = () => (
