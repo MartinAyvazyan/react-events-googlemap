@@ -1,14 +1,10 @@
 import { connect } from 'react-redux';
-import search from '../../modules/search/searchThunk';
+import { onQueryChange } from '../../modules/search/searchActions';
 
 import Search from './Search';
 
-const mapStateToProps = state => ({
-  query: state.query,
-});
-
 const mapDispatchToProps = {
-  handleChange: search,
+  handleChange: onQueryChange,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(null, mapDispatchToProps)(Search);

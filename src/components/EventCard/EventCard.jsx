@@ -4,13 +4,12 @@ import { Card, CardHeader, CardActions } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
 const EventCard = props => (
-
-  <Card ><CardHeader
-    title={props.name.html}
-    avatar={props.logo && props.logo.url}
-  />
+  <Card>
+    <CardHeader title={props.name.html} avatar={props.logo && props.logo.url} />
     <CardActions>
-      <FlatButton onClick={() => props.handleClick(props.id)}>View</FlatButton>
+      <FlatButton onClick={() => props.handleClick(props.id)} disabled={props.buttonCLicked}>
+        View
+      </FlatButton>
     </CardActions>
   </Card>
 );
@@ -23,8 +22,8 @@ EventCard.propTypes = {
   logo: PropTypes.shape({
     url: PropTypes.string.isRequired,
   }),
+  buttonCLicked: PropTypes.bool.isRequired,
   handleClick: PropTypes.func.isRequired,
-
 };
 EventCard.defaultProps = {
   logo: null,

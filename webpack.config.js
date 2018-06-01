@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader');
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -33,7 +34,7 @@ module.exports = {
     /**
      * This array contains extensions which we can omit when importing a file
      */
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
 
   /**
@@ -110,7 +111,12 @@ module.exports = {
           },
         },
       ],
-    }],
+    },
+    {
+      test: /\.tsx?$/,
+      loader: 'awesome-typescript-loader',
+    },
+    ],
   },
 
   plugins: [
@@ -126,6 +132,8 @@ module.exports = {
       filename: '[name].[hash:8].css',
       chunkFilename: '[id].css',
     }),
+    new CheckerPlugin(),
+
   ],
 
   /**

@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import Events from './Events';
-import searchInMap from '../../modules/map/mapThunk';
+import { onButtonCLick } from '../../modules/map/mapActions';
 
 const mapStateToProps = state => ({
   events: state.search.events,
+  buttonCLicked: state.map.buttonCLicked,
 });
 
 const mapDispatchToProps = {
-  handleClick: searchInMap,
+  handleClick: onButtonCLick,
 };
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Events);

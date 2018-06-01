@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EventCard from '../../../components/EventCard';
 
-const Events = props => (
-
-  props.events && props.events.map(event =>
-    <div key={event.id}> <EventCard {...event} handleClick={props.handleClick} /> </div>)
-
-
-);
+const Events = props =>
+  props.events &&
+  props.events.map(event => (
+    <div key={event.id}>
+      <EventCard {...event} handleClick={props.handleClick} buttonCLicked={props.buttonCLicked} />
+    </div>
+  ));
 
 Events.propTypes = {
   events: PropTypes.arrayOf(PropTypes.shape({

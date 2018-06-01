@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import PropTypes from 'prop-types';
-import debounce from 'lodash-es/debounce';
-
 
 class Search extends Component {
-  search = debounce(this.props.handleChange, 400);
-  handleChange(query) {
-    this.search(query);
+  state = {
+    query: '',
+  };
+  handleChange1(query) {
+    this.setState(
+      {
+        query: query === ' ' ? query.trim() : query,
+      },
+      () => this.props.handleChange(this.state.query),
+    );
   }
   render() {
     return (
@@ -16,7 +21,8 @@ class Search extends Component {
           name="query"
           hintText="Enter event name"
           floatingLabelText="Event Name"
-          onChange={event => this.handleChange(event.target.value)}
+          value={this.state.query}
+          onChange={event => this.handleChange1(event.target.value)}
         />
       </div>
     );
@@ -28,4 +34,3 @@ Search.propTypes = {
 };
 
 export default Search;
-

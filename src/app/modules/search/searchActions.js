@@ -1,7 +1,7 @@
-import { QUERY_CHANGE, FETCH_SUCCESS, FETCH_FAILED } from './searchReducer';
+import { ON_QUERY_CHANGE, FETCH_SUCCESS, FETCH_FAILED } from './searchReducer';
 
-export const doQueryChange = query => ({
-  type: QUERY_CHANGE,
+export const onQueryChange = query => ({
+  type: ON_QUERY_CHANGE,
   query,
 });
 
@@ -12,5 +12,5 @@ export const doFetchSucces = events => ({
 
 export const doFetchFailed = error => ({
   type: FETCH_FAILED,
-  payload: { error },
+  error,
 });

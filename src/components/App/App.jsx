@@ -1,7 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux';
-
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { cyan500 } from 'material-ui/styles/colors';
