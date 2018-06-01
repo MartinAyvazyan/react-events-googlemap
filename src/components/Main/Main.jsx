@@ -5,9 +5,7 @@ import Search from '../../app/containers/Search';
 import Events from '../../app/containers/Events';
 import GoogleMap from '../../app/containers/GoogleMap';
 
-
 const Main = () => (
-
   <div>
     <AppBar title="My AppBar" />
     <Search />
@@ -20,8 +18,6 @@ const Main = () => (
       </div>
     </div>
   </div>
-
-
 );
 
 export default Main;
